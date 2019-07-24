@@ -1,0 +1,45 @@
+{ "skills": {
+    "acrobatics": 20,
+    "athletics": 6,
+    "bluff": 16,
+    "computers": 19,
+    "culture": 19,
+    "diplomacy": 8,
+    "disguise": 8,
+    "engineering": 21,
+    "intimidate": 12,
+    "life science": 19,
+    "medicine": 18,
+    "mysticism": 5,    
+    "perception": 17,
+    "physical science": 18,
+    "piloting": 20,
+    "sense motive": 17,
+    "sleight of hand": 19,
+    "stealth": 22,
+    "survival": 19
+    },
+  "abilities": {
+    "strength": 8,
+    "dexterity": 19,
+    "constitution": 17,
+    "intelligence": 18,
+    "wisdom": 14,
+    "charisma": 12
+    },
+  "armor class": {
+    "eac": 30,
+    "kac": 30
+    },
+  "saves": {
+    "fortitude": 8,
+    "reflex": 10,
+    "will": 10
+    },
+  "attack bonus": 13,
+  "damage": {
+    "attack damage": {"d6": 3, "fixed": 6},
+    "trick attack damage": {"d6": 3, "d8": 5, "fixed": 6}
+  }
+}
+  
