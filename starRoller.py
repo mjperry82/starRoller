@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from tkinter import Tk, Label, Button
+from tkinter import Tk, Label, Button, Spinbox, IntVar
 from random import randrange
 from json import loads
 
@@ -44,14 +44,19 @@ diceDisplay = Label(window, text="00", font=("Arial Bold", 50), padx=75)
 diceDisplay.grid(column=0, row=1, columnspan=3)
 
 critDisplay = Label(window, text='', font=("Arial Bold", 10), fg='red', padx=1, pady=1)
-critDisplay.grid(column=0, row=2, columnspan=3)
+critDisplay.grid(column=1, row=2)
+
+var = IntVar()
+var.set(0)
+diceModifier = Spinbox(window, from_=-10, to_=10, width=3, textvariable=var)
+diceModifier.grid(column=2, row=2, padx=1, pady=1)
 
 ### SKILLS buttons and function to roll skill checks
 
+#define skills action
 def skillRoller(skill):
-    #print(skill)
     diceRoll = randrange(1, 21)
-    skillResult = diceRoll + skills.get(skill)
+    skillResult = diceRoll + skills.get(skill) + int(diceModifier.get())
     if diceRoll == 20:
         critDisplay.configure(text='Nat 20')
     elif diceRoll == 1:
@@ -61,6 +66,7 @@ def skillRoller(skill):
     diceLabel.configure(text=skill.capitalize())
     diceDisplay.configure(text=skillResult)
 
+# create skill buttons from skill list in json file
 skillButtons = []
 rowCount = 3
 for skill in skills:
@@ -80,7 +86,7 @@ for skill in skills:
 
 def rollTAStealthClicked():
     diceRoll = rollDice({'d20': 1})
-    taStealthRoll = diceRoll + skills.get('stealth') + 4
+    taStealthRoll = diceRoll + skills.get('stealth') + 4 + int(diceModifier.get())
     if diceRoll == 20:
         critDisplay.configure(text='Nat 20')
     elif diceRoll == 1:
@@ -95,7 +101,7 @@ taStealthButton.grid(column=2, row=3, sticky='nsew', padx=BTN_PDING, pady=BTN_PD
 
 def rollAttackClicked():
     diceRoll = randrange(1, 21)
-    attackRoll = diceRoll + char.get('attack bonus')
+    attackRoll = diceRoll + char.get('attack bonus') + int(diceModifier.get())
     if diceRoll == 20:
         critDisplay.configure(text='Nat 20')
     elif diceRoll == 1:
@@ -109,9 +115,8 @@ attackButton = Button(window, text="Attack Roll", command=rollAttackClicked)
 attackButton.grid(column=2, row=4, sticky='nsew', padx=BTN_PDING, pady=BTN_PDING)
 
 # Damage Calculator Buttons
-
 def damageClicked(damageType):
-    damageRoll = rollDice(damage.get(damageType))
+    damageRoll = rollDice(damage.get(damageType)) + int(diceModifier.get())
     diceLabel.configure(text='{}'.format(damageType.capitalize()))
     diceDisplay.configure(text=damageRoll)
 
@@ -127,10 +132,9 @@ for dType in damage:
     damageButtons.append(b)
 
 # Saving Rolls
-
 def savingClicked(save):
     diceRoll = randrange(1, 21)
-    saveResult = diceRoll + saves.get(save)
+    saveResult = diceRoll + saves.get(save) + int(diceModifier.get())
     if diceRoll == 20:
         critDisplay.configure(text='Nat 20')
     elif diceRoll == 1:
@@ -149,4 +153,5 @@ for save in saves:
                command=lambda save=save: savingClicked(save))
     b.grid(column=column, row=row, sticky='nsew', padx=BTN_PDING, pady=BTN_PDING)
     savingButtons.append(b)
+
 window.mainloop()
