@@ -46,10 +46,13 @@ diceDisplay.grid(column=0, row=1, columnspan=3)
 critDisplay = Label(window, text='', font=("Arial Bold", 10), fg='red', padx=1, pady=1)
 critDisplay.grid(column=1, row=2)
 
+diceModLabel = Label(window, text="Dice Modifier:", font=("Arial", 10))
+diceModLabel.grid(column=2, row=2, sticky='w')
+
 var = IntVar()
 var.set(0)
-diceModifier = Spinbox(window, from_=-10, to_=10, width=3, textvariable=var)
-diceModifier.grid(column=2, row=2, padx=1, pady=1)
+diceModifier = Spinbox(window, from_=-10, to_=10, width=5, textvariable=var)
+diceModifier.grid(column=2, row=2, sticky='e', padx=1, pady=1)
 
 ### SKILLS buttons and function to roll skill checks
 
