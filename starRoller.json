@@ -36,10 +36,221 @@
     "reflex": 10,
     "will": 10
     },
-  "attack bonus": 13,
+  "attack bonus": {
+    "ranged": 13
+    },
   "damage": {
     "attack damage": {"d6": 3, "fixed": 6},
     "trick attack damage": {"d6": 3, "d8": 5, "fixed": 6}
-  }
+  },
+  "buttons": {
+    "acrobatics": {
+      "buttonType": "skills",
+      "mainStat": "acrobatics",
+      "buttonLabel": "Roll Acrobatics", 
+      "displayLabel": "Acrobatics", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "athletics": {
+      "buttonType": "skills",
+      "mainStat": "athletics",
+      "buttonLabel": "Roll Athletics", 
+      "displayLabel": "Athletics", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "bluff": {
+      "buttonType": "skills",
+      "mainStat": "bluff",
+      "buttonLabel": "Roll Bluff", 
+      "displayLabel": "Bluff", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "computers": {
+      "buttonType": "skills",
+      "mainStat": "computers",
+      "buttonLabel": "Roll Computers", 
+      "displayLabel": "Computers", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "culture": {
+      "buttonType": "skills",
+      "mainStat": "culture",
+      "buttonLabel": "Roll Culture", 
+      "displayLabel": "Culture", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "diplomacy": {
+      "buttonType": "skills",
+      "mainStat": "diplomacy",
+      "buttonLabel": "Roll Diplomacy", 
+      "displayLabel": "Diplomacy", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "disguise": {
+      "buttonType": "skills",
+      "mainStat": "disguise",
+      "buttonLabel": "Roll Disguise", 
+      "displayLabel": "Disguise", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "engineering": {
+      "buttonType": "skills",
+      "mainStat": "engineering",
+      "buttonLabel": "Roll Engineering", 
+      "displayLabel": "Engineering", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "intimidate": {
+      "buttonType": "skills",
+      "mainStat": "intimidate",
+      "buttonLabel": "Roll Intimidate", 
+      "displayLabel": "Intimidate", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "life science": {
+      "buttonType": "skills",
+      "mainStat": "life science",
+      "buttonLabel": "Roll Life Science", 
+      "displayLabel": "Life Science", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "medicine": {
+      "buttonType": "skills",
+      "mainStat": "medicine",
+      "buttonLabel": "Roll Medicine", 
+      "displayLabel": "Medicine", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "mysticism": {
+      "buttonType": "skills",
+      "mainStat": "mysticism",
+      "buttonLabel": "Roll Mysticism", 
+      "displayLabel": "Mysticism", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "perception": {
+      "buttonType": "skills",
+      "mainStat": "perception",
+      "buttonLabel": "Roll Perception", 
+      "displayLabel": "Perception", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "physical science": {
+      "buttonType": "skills",
+      "mainStat": "physical science",
+      "buttonLabel": "Roll Physical Science", 
+      "displayLabel": "Physical Science", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "piloting": {
+      "buttonType": "skills",
+      "mainStat": "piloting",
+      "buttonLabel": "Roll Piloting", 
+      "displayLabel": "Piloting", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "sense motive": {
+      "buttonType": "skills",
+      "mainStat": "sense motive",
+      "buttonLabel": "Roll Sense Motive", 
+      "displayLabel": "Sense Motive", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "sleight of hand": {
+      "buttonType": "skills",
+      "mainStat": "sleight of hand",
+      "buttonLabel": "Roll Sleight of Hand", 
+      "displayLabel": "Sleight of Hand", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "stealth": {
+      "buttonType": "skills",
+      "mainStat": "stealth",
+      "buttonLabel": "Roll Stealth", 
+      "displayLabel": "Stealth", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "survival": {
+      "buttonType": "skills",
+      "mainStat": "survival",
+      "buttonLabel": "Roll Survival", 
+      "displayLabel": "Survival", 
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "blank": {"buttonType": "None"},
+    "ta stealth": {
+        "buttonType": "skills",
+        "mainStat": "stealth",
+        "buttonLabel": "Trick Attack Stealth",
+        "displayLabel": "TA Stealth",
+        "statMod": 4,
+        "dice": {"d20": 1}
+      },
+    "attackRoll": {
+      "buttonType": "attack bonus",
+      "mainStat": "ranged",
+      "buttonLabel": "Attack Roll",
+      "displayLabel": "Attack Roll",
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "attack damage": {
+      "buttonType": "damage",
+      "buttonLabel": "Attack Damage",
+      "displayLabel": "Attack Damage",
+      "statMod": 6,
+      "dice": {"d6": 3}
+      },
+    "trick attack damage": {
+      "buttonType": "damage",
+      "buttonLabel": "Trick Attack Damage",
+      "displayLabel": "Trick Attack Damage",
+      "statMod": 6,
+      "dice": {"d6": 3, "d8": 5}
+      },    
+    "fortitude": {
+      "buttonType": "saves",
+      "mainStat": "fortitude",
+      "buttonLabel": "Fortitude Save",
+      "displayLabel": "Fortitude Save",
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "reflex": {
+      "buttonType": "saves",
+      "mainStat": "reflex",
+      "buttonLabel": "Reflex Save",
+      "displayLabel": "Reflex Save",
+      "statMod": 0,
+      "dice": {"d20": 1}
+      },
+    "will": {
+      "buttonType": "saves",
+      "mainStat": "will",
+      "buttonLabel": "Will Save",
+      "displayLabel": "Will Save",
+      "statMod": 0,
+      "dice": {"d20": 1}
+      }
+    }
 }
   
