@@ -56,12 +56,15 @@ def createDisplay(window):
     return display
 
 def main():
+    character = loadCharacter()
     # create base tkinter window
     window = Tk()
-    window.title("starRoller")
+    if character.get('name') != None:
+        window.title("starRoller - {}".format(character.get('name')))
+    else:
+        window.title("starRoller")
     
     display = createDisplay(window)
-    character = loadCharacter()
     
     column = 0
     row = 4

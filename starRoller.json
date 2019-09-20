@@ -1,23 +1,26 @@
-{ "skills": {
-    "acrobatics": 20,
+{ 
+  "name": "Smash",
+  "skills": {
+    "acrobatics": 21,
     "athletics": 6,
-    "bluff": 16,
-    "computers": 19,
-    "culture": 19,
+    "bluff": 17,
+    "computers": 20,
+    "culture": 20,
     "diplomacy": 8,
     "disguise": 8,
-    "engineering": 21,
-    "intimidate": 12,
+    "engineering": 22,
+    "intimidate": 13,
     "life science": 19,
     "medicine": 18,
     "mysticism": 5,    
-    "perception": 17,
-    "physical science": 18,
-    "piloting": 20,
-    "sense motive": 17,
-    "sleight of hand": 19,
-    "stealth": 22,
-    "survival": 19
+    "perception": 18,
+    "physical science": 19,
+    "piloting": 22,
+    "sense motive": 18,
+    "sleight of hand": 20,
+    "stealth": 23,
+    "survival": 20,
+    "initiative": 11
     },
   "abilities": {
     "strength": 8,
@@ -33,15 +36,15 @@
     },
   "saves": {
     "fortitude": 8,
-    "reflex": 10,
-    "will": 10
+    "reflex": 11,
+    "will": 11
     },
   "attack bonus": {
-    "ranged": 13
+    "ranged": 14
     },
   "damage": {
-    "attack damage": {"d6": 3, "fixed": 6},
-    "trick attack damage": {"d6": 3, "d8": 5, "fixed": 6}
+    "attack damage": {"d6": 4, "fixed": 6},
+    "trick attack damage": {"d6": 4, "d8": 5, "fixed": 6}
   },
   "buttons": {
     "acrobatics": {
@@ -218,15 +221,23 @@
       "buttonLabel": "Attack Damage",
       "displayLabel": "Attack Damage",
       "statMod": 6,
-      "dice": {"d6": 3}
+      "dice": {"d6": 4}
       },
     "trick attack damage": {
       "buttonType": "damage",
       "buttonLabel": "Trick Attack Damage",
       "displayLabel": "Trick Attack Damage",
       "statMod": 6,
-      "dice": {"d6": 3, "d8": 5}
-      },    
+      "dice": {"d6": 4, "d8": 5}
+      },
+    "initiative": {
+      "buttonType": "skills",
+      "mainStat": "initiative",
+      "buttonLabel": "Roll Initiative",
+      "displayLabel": "Initiative",
+      "statMod": 0,
+      "dice": {"d20": 1}
+    },
     "fortitude": {
       "buttonType": "saves",
       "mainStat": "fortitude",
