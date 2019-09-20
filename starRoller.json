@@ -42,9 +42,6 @@
   "attack bonus": {
     "ranged": 0
     },
-  "damage": {
-    "attack damage": {"d6": 0, "fixed": 1},1
-  },
   "buttons": {
     "acrobatics": {
       "buttonType": "skills",
@@ -211,8 +208,8 @@
       "buttonType": "damage",
       "buttonLabel": "Attack Damage",
       "displayLabel": "Attack Damage",
-      "statMod": 6,
-      "dice": {"d6": 4}
+      "statMod": 1,
+      "dice": {"d6": 1}
       },
     "initiative": {
       "buttonType": "skills",
