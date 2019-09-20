@@ -1,50 +1,49 @@
 { 
-  "name": "Smash",
+  "name": "<add name here>",
   "skills": {
-    "acrobatics": 21,
-    "athletics": 6,
-    "bluff": 17,
-    "computers": 20,
-    "culture": 20,
-    "diplomacy": 8,
-    "disguise": 8,
-    "engineering": 22,
-    "intimidate": 13,
-    "life science": 19,
-    "medicine": 18,
-    "mysticism": 5,    
-    "perception": 18,
-    "physical science": 19,
-    "piloting": 22,
-    "sense motive": 18,
-    "sleight of hand": 20,
-    "stealth": 23,
-    "survival": 20,
-    "initiative": 11
+    "acrobatics": 0,
+    "athletics": 0,
+    "bluff": 0,
+    "computers": 0,
+    "culture": 0,
+    "diplomacy": 0,
+    "disguise": 0,
+    "engineering": 0,
+    "intimidate": 0,
+    "life science": 0,
+    "medicine": 0,
+    "mysticism": 0,    
+    "perception": 0,
+    "physical science": 0,
+    "piloting": 0,
+    "sense motive": 0,
+    "sleight of hand": 0,
+    "stealth": 0,
+    "survival": 0,
+    "initiative": 0
     },
   "abilities": {
-    "strength": 8,
-    "dexterity": 19,
-    "constitution": 17,
-    "intelligence": 18,
-    "wisdom": 14,
-    "charisma": 12
+    "strength": 0,
+    "dexterity": 0,
+    "constitution": 0,
+    "intelligence": 0,
+    "wisdom": 0,
+    "charisma": 0
     },
   "armor class": {
-    "eac": 30,
-    "kac": 30
+    "eac": 0,
+    "kac": 0
     },
   "saves": {
-    "fortitude": 8,
-    "reflex": 11,
-    "will": 11
+    "fortitude": 0,
+    "reflex": 0,
+    "will": 0
     },
   "attack bonus": {
-    "ranged": 14
+    "ranged": 0
     },
   "damage": {
-    "attack damage": {"d6": 4, "fixed": 6},
-    "trick attack damage": {"d6": 4, "d8": 5, "fixed": 6}
+    "attack damage": {"d6": 0, "fixed": 1},1
   },
   "buttons": {
     "acrobatics": {
@@ -199,15 +198,7 @@
       "statMod": 0,
       "dice": {"d20": 1}
       },
-    "blank": {"buttonType": "None"},
-    "ta stealth": {
-        "buttonType": "skills",
-        "mainStat": "stealth",
-        "buttonLabel": "Trick Attack Stealth",
-        "displayLabel": "TA Stealth",
-        "statMod": 4,
-        "dice": {"d20": 1}
-      },
+    "blank": {"buttonType": "None"},    
     "attackRoll": {
       "buttonType": "attack bonus",
       "mainStat": "ranged",
@@ -222,13 +213,6 @@
       "displayLabel": "Attack Damage",
       "statMod": 6,
       "dice": {"d6": 4}
-      },
-    "trick attack damage": {
-      "buttonType": "damage",
-      "buttonLabel": "Trick Attack Damage",
-      "displayLabel": "Trick Attack Damage",
-      "statMod": 6,
-      "dice": {"d6": 4, "d8": 5}
       },
     "initiative": {
       "buttonType": "skills",
