@@ -4,11 +4,14 @@ from tkinter import Tk, Label, Button, Spinbox, IntVar
 from random import randrange
 from json import loads
 from buttons import createSkillButton, createDamageButton, createSavesButton, createAttackButton
+from pathlib import Path
 
 BTN_PDING=1
 
 def loadCharacter():
-    with open('starRoller.json', 'r') as f:
+    dir = Path(__file__).parent.absolute()
+    file = dir / 'starRoller.json'
+    with open(file, 'r') as f:
         char_json = f.read()
         
     return loads(char_json)
