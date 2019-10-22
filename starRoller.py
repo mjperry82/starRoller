@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from tkinter import Tk, Label, Button, Spinbox, IntVar
+from tkinter import Tk, Frame, Label, Button, Spinbox, IntVar
 from random import randrange
 from json import loads
 from buttons import createSkillButton, createDamageButton, createSavesButton, createAttackButton
@@ -32,29 +32,51 @@ def rollDice(diceToRoll):
 
 def createDisplay(window):
     display = {}
-    # create label to indicate what dice roll is being displayed
-    diceLabel = Label(window, text='', font=('Arial', 20), padx=5)
-    diceLabel.grid(column=0, row=0, columnspan=3)
+    frame = Frame(window, bg='White')
+    frame.grid(row=0, column=0, columnspan=3, rowspan=3, sticky='nsew')
+    
+    # create label to display the rolled dice    
+    diceLabel = Label(window, text='', bg='white', font=('Arial', 20))
+    diceLabel.grid(column=0, row=0, columnspan=3, sticky='nsew')
     display.update({"diceLabel": diceLabel})
 
     # create label to display the rolled dice
-    diceDisplay = Label(window, text="00", font=("Arial Bold", 50), padx=75)
-    diceDisplay.grid(column=0, row=1, columnspan=3)
+    diceDisplay = Label(window, text="00", bg='white', font=("Arial Bold", 50))
+    diceDisplay.grid(column=0, row=1, columnspan=3, sticky='nsew')
     display.update({"diceDisplay": diceDisplay})
 
-    critDisplay = Label(window, text='', font=("Arial Bold", 10), fg='red', padx=1, pady=1)
+    critDisplay = Label(window, text='', bg='white', font=("Arial Bold", 10), fg='red')
     critDisplay.grid(column=1, row=2)
     display.update({"critDisplay": critDisplay})
 
-    diceModLabel = Label(window, text="Dice Modifier:", font=("Arial", 10))
-    diceModLabel.grid(column=2, row=2, sticky='w', padx=1, pady=1)
+    diceModLabel = Label(window, text="Dice Modifier:", bg='white', font=("Arial", 10))
+    diceModLabel.grid(column=2, row=2, sticky='w')
     display.update({"diceModLabel": diceModLabel})
     
     modDefault = IntVar()
     modDefault.set(0)
-    diceModifier = Spinbox(window, from_=-10, to_=10, width=5, textvariable=modDefault)
-    diceModifier.grid(column=2, row=2, sticky='e', padx=1, pady=1)
+    diceModifier = Spinbox(window, from_=-10, to_=10, width=4, textvariable=modDefault, bg='white')
+    diceModifier.grid(column=2, row=2, sticky='e')
     display.update({"diceModifier": diceModifier})
+    
+    
+    #diceDisplay = Label(frame, text="00", font=("Arial Bold", 50))
+    #diceDisplay.pack()
+    #display.update({"diceDisplay": diceDisplay})
+
+    #critDisplay = Label(frame, text='', font=("Arial Bold", 10), fg='red', padx=1, pady=1)
+    #critDisplay.pack()
+    #display.update({"critDisplay": critDisplay})
+    
+    #modDefault = IntVar()
+    #modDefault.set(0)
+    #diceModifier = Spinbox(frame, from_=-10, to_=10, width=5, textvariable=modDefault)
+    #diceModifier.pack(side='right')
+    #display.update({"diceModifier": diceModifier})
+
+    #diceModLabel = Label(frame, text="Dice Modifier:", font=("Arial", 10))
+    #diceModLabel.pack(side='right')
+    #display.update({"diceModLabel": diceModLabel})    
     
     return display
 
