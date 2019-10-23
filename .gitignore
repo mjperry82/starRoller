@@ -1,2 +1,5 @@
-# ignore json files
-*.json
+# ignore default character json file
+starRoller.json
+
+# ignore pycache
+__pycache__/
